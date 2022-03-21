@@ -37,6 +37,17 @@ namespace Avarace_library
             
             
         }
+        public static int HealthTest()
+        {
+
+            int Hp =100;
+            Hp = Health();
+            while (Hp != 0);
+            {
+                Hp = Hp - AttackRNG();
+            }
+            return Hp;
+        }
         public static int Health()
         {
             int health = 100;
@@ -48,7 +59,6 @@ namespace Avarace_library
             //int damage = rand.Next(0, 20);
             //Console.WriteLine(damage+"pts of Damage");
         }
-        public static void Test()
-        { Console.WriteLine("test"); }
+      
     }
 }
