@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Avarace library\Avarace library.csproj">
+      <Project>{b0e39151-b808-4378-a704-2d653d1c08a4}</Project>
+      <Name>Avarace library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

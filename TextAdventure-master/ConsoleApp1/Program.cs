@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Avarace_library;
 
 namespace ConsoleApp1
 {
@@ -50,14 +51,16 @@ namespace ConsoleApp1
                 if (start == false)
                 {
                     //Console.WriteLine($"Your in - ({rooms[roomLocation]})");
-                    Console.WriteLine("Type start Jump Right In");
+                    Console.WriteLine("Type Start to Begin");
+                    Console.WriteLine("Type Exit to leave");
+                    Console.WriteLine(" ");
                     Console.WriteLine("R. Display Rooms");
                     Console.WriteLine("W. Display Weapons");
                     Console.WriteLine("P. Display Potions");
                     Console.WriteLine("T. Display Treasures");
                     Console.WriteLine("M. Display Mobs");
                     Console.WriteLine("I. Display Items");
-                    Console.WriteLine("Type Exit to leave");
+                    Console.WriteLine(" ");
                     Console.Write("Enter A Choice > ");
                     string input = Console.ReadLine();
 
@@ -95,6 +98,7 @@ namespace ConsoleApp1
                         case "leave": exit = true; break;
                         case "exit": exit = true; break;
                         case "start": start = true; break;
+                        case "1": start = true; break;
                         case "begin": start = true; break;
 
                         default: Console.WriteLine(input+" is Not an Option"); Console.WriteLine(); break;
@@ -105,21 +109,36 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("");
                     Console.WriteLine($"Your in - ({rooms[roomLocation]})");
+                    Console.WriteLine($"Your HP is ({Avarace_RNG.Health(/*Avarace_RNG.AttackRNG()*/)}) ");
                     Console.WriteLine("");
+                    Console.WriteLine("1.Move North");
+                    Console.WriteLine("2.Move South");
+                    Console.WriteLine("3.Attack");
+                    Console.WriteLine("4.Exit");
+                    Console.WriteLine(" ");
                     string input = Console.ReadLine();
+                    Console.WriteLine(" ");
                     switch (input.ToLower())
                     {
-
+                        
+                        //Avarace_RNG.Health(damage);
+                        //case "5": Console.WriteLine(Avarace_RNG.Health()); break;
                         case "n": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
                         case "go north": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
+                        case "move north": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
                         case "north": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
                         case "forward": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
+                        case "1": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
                         case "s": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
                         case "go south": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
+                        case "move south": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
                         case "south": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
                         case "back": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
+                        case "2": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
+                        case "3": if (Avarace_RNG.AttackRNG() == 0) { Console.WriteLine("Attack Missed");} else { Console.WriteLine(Avarace_RNG.AttackRNG()+"Pts of Damage"); } break;
                         case "leave": exit = true; break;
                         case "exit": exit = true; break;
+                        case "4": exit = true; break;
                         case "start": start = true; break;
                         case "menu": start = false; break;
                         default: Console.WriteLine(input +" is Not an Option"); Console.WriteLine(); break;
