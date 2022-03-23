@@ -20,7 +20,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             bool exit = false;
-            bool start = false;
+            bool start = true;
             int roomLocation = 0;
 
 
