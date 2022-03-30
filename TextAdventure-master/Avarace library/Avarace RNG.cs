@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Avarace_library
 {
-   public static class Avarace_RNG
+   public class Avarace_RNG
     {
-        
+
+        int playerDamage, mobDamage;
+
         
         public static int AttackRNG()
         {
@@ -20,45 +22,31 @@ namespace Avarace_library
         }
         public static void Damage()
         {
-            bool test = true;
-            //int DamageHistory;
-            //int Dp = 0;
-            while (test == true)
+            int playerHp = 100;
+            int mobHp = 100;
+            while (playerHp > 0 && mobHp > 0)
             {
-                int DamageHistory;
-                int Dp = 0;
-                if (Dp == 0)
-                {
-                    Dp = Dp + AttackRNG();
-                    DamageHistory = Dp;
-                }
-                
-            }
-            
-            
-        }
-        public static int HealthTest()
-        {
+                Random rand = new Random();
+                int playerDamage = rand.Next(0, 20);
+                playerHp = playerDamage;
+                int mobDamage = rand.Next(0, 20);
+                mobHp = mobDamage;
 
-            int Hp =100;
-            Hp = Health();
-            while (Hp != 0);
-            {
-                Hp = Hp - AttackRNG();
-            }
-            return Hp;
+            }           
         }
-        public static int Health()
+        public static int PlayerDamage()
         {
-            int health = 100;
-            int damage = AttackRNG();
-            health = health - damage;
-            return health;
-            
-            //Random rand = new Random();
-            //int damage = rand.Next(0, 20);
-            //Console.WriteLine(damage+"pts of Damage");
-        }
-      
+            int playerHp = 100;
+
+            while (playerHp > 0)
+            {
+                Random rand = new Random();
+                int playerDamage = rand.Next(0, 20);
+                playerHp = playerHp - playerDamage;
+                
+                return playerHp;
+            }
+            return playerHp;
+        }      
     }
 }

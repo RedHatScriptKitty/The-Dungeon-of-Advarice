@@ -13,11 +13,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Avarace_library;
 
+
 namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             bool exit = false;
             bool start = true;
@@ -109,7 +110,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("");
                     Console.WriteLine($"Your in - ({rooms[roomLocation]})");
-                    Console.WriteLine($"Your HP is ({Avarace_RNG.Health(/*Avarace_RNG.AttackRNG()*/)}) ");
+                    Console.WriteLine($"Your HP is () ");
                     Console.WriteLine("");
                     Console.WriteLine("1.Move North");
                     Console.WriteLine("2.Move South");
@@ -135,7 +136,11 @@ namespace ConsoleApp1
                         case "south": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
                         case "back": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
                         case "2": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
-                        case "3": if (Avarace_RNG.AttackRNG() == 0) { Console.WriteLine("Attack Missed");} else { Console.WriteLine(Avarace_RNG.AttackRNG()+"Pts of Damage"); } break;
+
+                        //case "3": if (Avarace_RNG.AttackRNG() == 0) { Console.WriteLine("Attack Missed");} else { Console.WriteLine(Avarace_RNG.AttackRNG()+"Pts of Damage"); } break;
+                        case "3": CombatClass.Damage(); break;
+                        
+                        
                         case "leave": exit = true; break;
                         case "exit": exit = true; break;
                         case "4": exit = true; break;
