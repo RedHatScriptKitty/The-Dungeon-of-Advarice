@@ -41,8 +41,8 @@ namespace ConsoleApp1
              string[] Treasures = new string[3] { "Gold", "Armor", "leather boot" }; 
 
              //List
-             List<string> Mobs = new List<string>() { "Demon", "Mimic", "Baby Wyvern", "Skeleton","lich" };
-             List<string> Items = new List<string>() 
+             List<string> Mobs = new List<string>() { "Demon", "Mimic", "Baby Wyvern", "Skeleton","lich" };/*monster.add(*Mob Name)*/
+            List<string> Items = new List<string>() 
              { "Boss door key", "Strange key", "Magic book", "Torch" };
              //Hub*/
 
