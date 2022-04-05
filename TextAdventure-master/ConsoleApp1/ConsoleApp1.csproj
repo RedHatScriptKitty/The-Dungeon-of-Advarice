@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CombatClass.cs" />
+    <Compile Include="menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temp menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

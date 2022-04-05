@@ -8,12 +8,12 @@ namespace ConsoleApp1
 {
     public class CombatClass
     {
-        public static int Damage()
+        public static void Damage()
         {
             int playerHp = 100;
             int mobHp = 100;
             int died = 1;
-            while (mobHp > 0 && playerHp > 0)
+            if (mobHp > 0 && playerHp > 0)
             {
 
                 if (mobHp > 0)
@@ -60,7 +60,7 @@ namespace ConsoleApp1
                 died = 0;
 
             }
-            return died;
+            
         }
     }
 }
