@@ -8,14 +8,15 @@ using Avarace_library;
 
 namespace ConsoleApp1
 {
-    public class menu
+     public class menu
     {
         
         
         public static void TmpMenu()
         {
         bool exit = false;
-        bool start = true;
+        bool start = false
+;
         int roomLocation = 0;
         string[] rooms = Rooms.RFile();
         string[] weapons = Weapons.WFile();
@@ -57,8 +58,8 @@ namespace ConsoleApp1
                         case "treasures": foreach (string line in treasures) Console.WriteLine(treasures); break;                      
                         case "items": foreach (string line in items) Console.WriteLine(items); break;                      
                         case "mobs": foreach (string line in mobs) Console.WriteLine(mobs); break;              
-                        //case "n": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
-                        //case "s": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
+                        case "n": if (roomLocation != 4) { roomLocation++; } else { Console.WriteLine("You can't go North"); Console.WriteLine(); } break;
+                        case "s": if (roomLocation != 0) { roomLocation--; } else { Console.WriteLine("You can't go South"); Console.WriteLine(); } break;
                         case "2": exit = true; break;
                         case "leave": exit = true; break;
                         case "exit": exit = true; break;

@@ -17,4 +17,5 @@ namespace Avarace_library
             return (weapons);
 
         }
+    }
 }

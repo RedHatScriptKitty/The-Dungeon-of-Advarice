@@ -18,10 +18,24 @@ namespace ConsoleApp1
 {
     class Program
     {
+        
         public static void Main(string[] args)
         {
-            menu.TmpMenu();
-           
+            bool start = false;
+            Console.WriteLine("Would you like to Begin?");
+            string input = Console.ReadLine();
+            switch (input.ToLower())
+            {
+                
+                case "yes": start = true; break;
+
+            }
+            while (start == true)
+            {
+                menu.TmpMenu();
+                
+            }
+
         }
     }
 }
