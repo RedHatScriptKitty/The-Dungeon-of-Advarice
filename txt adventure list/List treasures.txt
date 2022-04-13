@@ -1,0 +1,3 @@
+_30Gold 
+_31Armor 
+_32Leather_Boot 

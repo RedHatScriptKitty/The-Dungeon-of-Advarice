@@ -1,0 +1,4 @@
+_11Boss_Door_Key 
+_12Strange_Key 
+_13Magic_Book 
+_14Torch 

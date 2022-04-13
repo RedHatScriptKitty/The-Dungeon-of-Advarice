@@ -1,0 +1,5 @@
+_18Entrance 
+_19Hallway 
+_20Atrium 
+_21Boss_Room 
+_22Treasure_Room 

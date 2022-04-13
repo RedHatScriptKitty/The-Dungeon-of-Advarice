@@ -1,0 +1,4 @@
+_40Sword 
+_41Glave 
+_42Bow
+_43Staff
