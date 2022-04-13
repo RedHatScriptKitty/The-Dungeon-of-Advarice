@@ -9,6 +9,7 @@ namespace Avarace_library
 {
     public class Rooms
     {
+        private string _id, _name, _description;
         public static string[] RFile()
         {
             Random rand = new Random();
@@ -16,6 +17,26 @@ namespace Avarace_library
             string[] rooms = File.ReadAllLines(@"C:\Users\NoahC\OneDrive\Desktop\txt adventure list\List rooms.txt");
             return (rooms);
         }
+        public Rooms()
+        {
+            _id = "0";
+            _name = "";
+            _description = "";
+        }
+        public Rooms(int id, string name, string description, string  lighting)
+        {
+            ID = id;
+            _name = name;
+            _description = description;
+            Lighting = lighting;
+        }
+        public string ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public string Lighting { get; set; } = "dim";
+
         public void movement()
         {
             string[] rooms = RFile(); 

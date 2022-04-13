@@ -12,10 +12,10 @@ namespace Avarace_library
         public static string[] User() 
         {
             string userName, userClass, userRace, userID;
-            //string[] cls = File.ReadAllLines(@"C:\Users\NoahC\OneDrive\Desktop\txt adventure list\List Class ");
-            //string[] race = File.ReadAllLines(@"C:\Users\NoahC\OneDrive\Desktop\txt adventure list\List Race ");
-            using (StreamReader reader = File.OpenText(@"../../../txt adventure list\List Class"))
-                return (userID);
+            string[] cls = File.ReadAllLines(@"C:\Users\NoahC\OneDrive\Desktop\txt adventure list\List Class ");
+            string[] race = File.ReadAllLines(@"C:\Users\NoahC\OneDrive\Desktop\txt adventure list\List Race ");
+            using (StreamReader reader = File.OpenText(@"../../../txt adventure list/List Class"))
+                return cls;
         }
     }
 }
