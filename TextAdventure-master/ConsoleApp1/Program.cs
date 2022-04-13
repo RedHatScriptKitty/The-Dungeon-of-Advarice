@@ -19,16 +19,17 @@ namespace ConsoleApp1
     class Program
     {
         
-        public static void Main(string[] args)
+        public static void Main(/*string[] args*/)
         {
             bool start = false;
             Console.WriteLine("Would you like to Begin?");
             string input = Console.ReadLine();
             switch (input.ToLower())
             {
-                
                 case "yes": start = true; break;
-
+                case "no": start = false; break;    
+                default: Console.WriteLine(input + " is Not an Option please Enter Yes or No"); Console.WriteLine(""); Program.Main();break;
+                 
             }
             while (start == true)
             {
