@@ -1,5 +1,8 @@
-_18Entrance 
-_19Hallway 
-_20Atrium 
-_21Boss_Room 
-_22Treasure_Room 
+ID:18
+name:Entrance 
+description: enter
+Lighting: bright-
+_19:Hallway -
+_20:Atrium -
+_21:Boss_Room -
+_22:Treasure_Room -

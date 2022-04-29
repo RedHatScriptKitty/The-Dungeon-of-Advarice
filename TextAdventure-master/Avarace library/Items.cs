@@ -13,7 +13,7 @@ namespace Avarace_library
         {
             Random rand = new Random();
             int unused = rand.Next(0, 20);
-            string[] items = File.ReadAllLines(@"C:\Users\NoahC\OneDrive\Desktop\txt adventure list\List items.txt");
+            string[] items = File.ReadAllLines(@"C:\Users\NoahC\source\repos\The-Dungeon-of-Advarice\txt adventure list\List items.txt");
             return (items);
         }
     }

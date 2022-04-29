@@ -18,6 +18,7 @@ namespace ConsoleApp1
         bool start = false
 ;
         int roomLocation = 0;
+        //string[] rooms = Roomscls.tstroom();
         string[] rooms = Rooms.RFile();
         string[] weapons = Weapons.WFile();
         string[] potions = Potions.PFile();

@@ -9,12 +9,19 @@ namespace Avarace_library
 {
     public class Rooms
     {
+        
+
+    
+
         private string _id, _name, _description;
         public static string[] RFile()
         {
+            
             Random rand = new Random();
             int unused = rand.Next(0, 20);
-            string[] rooms = File.ReadAllLines(@"C:\Users\NoahC\OneDrive\Desktop\txt adventure list\List rooms.txt");
+            string[] rooms = File.ReadAllLines(@"C:\Users\NoahC\source\repos\The-Dungeon-of-Advarice\txt adventure list\List rooms.txt");
+           
+            
             return (rooms);
         }
         public Rooms()
@@ -23,7 +30,7 @@ namespace Avarace_library
             _name = "";
             _description = "";
         }
-        public Rooms(int id, string name, string description, string  lighting)
+        public Rooms(string id, string name, string description, string  lighting)
         {
             ID = id;
             _name = name;
