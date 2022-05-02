@@ -16,12 +16,14 @@ namespace Avarace_library
         private string _id, _name, _description;
         public static string[] RFile()
         {
-            
+            StreamReader inputfile;
+
             Random rand = new Random();
             int unused = rand.Next(0, 20);
             string[] rooms = File.ReadAllLines(@"C:\Users\NoahC\source\repos\The-Dungeon-of-Advarice\txt adventure list\List rooms.txt");
-           
-            
+            //string[] rooms = File.ReadAllLines("List rooms.txt");
+
+
             return (rooms);
         }
         public Rooms()

@@ -9,22 +9,30 @@ namespace ConsoleApp1
 {
     public class Roomscls
     {
-        public static string[] tstroom()
+        public static void tstroom()
         {
             List<string> names = new List<string>();
             StreamReader inputfile;
-            inputfile = File.OpenText("List rooms");
-            char delim = '-';
-            string nameValue = inputfile.ReadLine();
-            string[] tokens = nameValue.Split(delim);
+            inputfile = File.OpenText("List rooms.txt");
+            //char delim = '_';
+            //string nameValue = inputfile.ReadLine();
+            //string[] tokens = nameValue.Split(delim);
+            string[] token = inputfile.ReadLine().Split('_');
+            //Console.WriteLine(tokens[1]);
+            foreach (string name in token)
+            {
+                names.Add(name);
+                Console.WriteLine(name);
+                Console.WriteLine(token);
 
-                foreach (string name in tokens)
-                {
-                    //names.Add(name);
-                    Console.WriteLine(name);
+            }
+            foreach (string name in token)
+            {
 
-                }
-            return (tokens);
+                Console.WriteLine($"{name} ");
+
+
+            }
         }
     }
 }
