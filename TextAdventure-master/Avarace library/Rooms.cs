@@ -16,7 +16,7 @@ namespace Avarace_library
         private string _id, _name, _description;
         public static string[] RFile()
         {
-            StreamReader inputfile;
+            //StreamReader inputfile;
 
             Random rand = new Random();
             int unused = rand.Next(0, 20);
